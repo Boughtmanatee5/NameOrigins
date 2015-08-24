@@ -32,8 +32,7 @@
     var nameLength = name.length;
     var middleIndex = Math.round(nameLength / 2);
 
-    nameArray.push(name.substring(0, middleIndex));
-    nameArray.push(name.substring(middleIndex, nameLength));
+    nameArray.push(name.substring(0, middleIndex), name.substring(middleIndex, nameLength));
 
     setDisplayText(nameDisplay, nameArray);
     setDisplayText(originDisplay, originArray);
@@ -49,15 +48,13 @@
   }
 
   function selectDisplayValue(arrayOne, arrayTwo) {
-    console.log(arguments.length)
     var textArray = [];
     if (arguments.length === 1) {
       for(var i = 0; i <= 1; i++) {
         textArray.push( 'Is a word of ' + arrayOne[getRandomNumber(0, arrayOne.length - 1)] + ' origin, meaning:' );
       }
     } else {
-      textArray.push( arrayOne[getRandomNumber(0, arrayOne.length - 1)] );
-      textArray.push( arrayTwo[getRandomNumber(0, arrayOne.length - 1)] );
+      textArray.push( arrayOne[getRandomNumber(0, arrayOne.length - 1)], arrayTwo[getRandomNumber(0, arrayOne.length - 1)] );
     }
     return textArray;
   }

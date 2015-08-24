@@ -1,20 +1,43 @@
-*,
+/**,
 *:after,
 *:before {
   box-sizing: border-box;
-}
+}*/
 
 html {
   font-size: 16px;
   font-family: 'Helvetica Neue', helvetica, sans-serif;
 }
-
+body {
+  background: #ddd;
+}
 .hidden {
   display: none;
 }
-.container {
-  padding: 5em 25%;
+h1 {
+  background: #0b83c2;
+  font-size: 20px;
+  color: #fff;
   text-align: center;
+  height: 25px;
+  padding-top: 7px;
+  border-bottom: 1px solid #2362af;
+  margin: 0;
+}
+h2 {
+  margin-bottom: 0;
+}
+h4 {
+  margin-top: 0;
+}
+.container {
+  margin: 2em 25% 0 25%;
+  padding-top: 3em;
+  height: 100vh;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #bdcad0;
+  border-radius: 7px;
 }
 input {
   width: 50%;
@@ -24,26 +47,56 @@ input {
 input[type="text"] {
   display: block;
   margin: 0 auto;
+  border: 1px solid #DBE1EB;
+  font-size: 26px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  color: #2E3133;
+  text-align: left;
 }
 input[type="button"] {
-  background-color: rgba(00, 0, 200, 0.5);
   width: 25%;
   margin: .25rem .125rem;
-  border: 1px solid #000;
   cursor: pointer;
-}
-input[type="button"]:hover {
-  background-color: rgba(00, 0, 255, 0.5);
+  background-color: #0b83c2;
+  color: #fff;
+  border: 1px solid #0b83c2;
+  font-size: 22px;
+  height: 40px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
 }
 #displayWrapper {
-  width: 75%;
-  margin: 0 auto;
   vertical-align: top;
+  background: #ddd;
+  border: 1px solid #bdcad0;
+  border-radius: 7px;
+}
+#displayWrapper h2 {
+  background: #fff;
+  margin-top: 0;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  padding: .125em 0;
+}
+#displayWrapper div:not(#originDisplay) {
+  border: 2px solid #000;
+  background: #fff;
+  margin: 2.5em 1em;
+  font-size: 22px;
+  font-weight: bold;
+}
+#meaningDisplay {
+  color: #0b83c2;
 }
 #displayWrapper div:not(:last-child) span:after {
   content: '';
   position: absolute;
-  bottom: -1.5em;
+  bottom: -2em;
   left: 50%;
   margin-left: -0.5em;
   width: 1em;
@@ -55,15 +108,7 @@ input[type="button"]:hover {
 span {
   position: relative;
   width: 25%;
-  height: 60px;
   display: inline-block;
-  border: 2px solid #000;
-  padding: .5em;
-  margin: 1em;
-}
-#nameDisplay span {
-  background: rgba(0, 30, 255, 0.5);
-}
-#originDisplay span {
-  height: 125px;
+  padding: 0.5em;
+  margin: 0.5em;
 }

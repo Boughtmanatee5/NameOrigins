@@ -50,9 +50,10 @@
   function selectDisplayValue(arrayOne, arrayTwo) {
     var textArray = [];
     if (arguments.length === 1) {
-      for(var i = 0; i <= 1; i++) {
-        textArray.push( 'Is a word of ' + arrayOne[getRandomNumber(0, arrayOne.length - 1)] + ' origin, meaning:' );
-      }
+      textArray.push(
+        'Is a word of<br>' + arrayOne[getRandomNumber(0, arrayOne.length - 1)] + '<br>origin, meaning:',
+        'Is a word of<br>' + arrayOne[getRandomNumber(0, arrayOne.length - 1)] + '<br>origin, meaning:'
+       );
     } else {
       textArray.push( arrayOne[getRandomNumber(0, arrayOne.length - 1)], arrayTwo[getRandomNumber(0, arrayOne.length - 1)] );
     }

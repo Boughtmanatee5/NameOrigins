@@ -83,7 +83,7 @@ input[type="button"] {
   border-top-right-radius: 7px;
   padding: .125em 0;
 }
-#displayWrapper div:not(#originDisplay) {
+#displayWrapper div:not(#originDisplay):not(.fb-share-button) {
   border: 2px solid #000;
   background: #fff;
   margin: 2.5em 1em;
@@ -93,7 +93,7 @@ input[type="button"] {
 #meaningDisplay {
   color: #0b83c2;
 }
-#displayWrapper div:not(#meaningDisplay) span:after {
+#displayWrapper div:not(#meaningDisplay):not(.fb-share-button) span:after {
   content: '';
   position: absolute;
   bottom: -2em;

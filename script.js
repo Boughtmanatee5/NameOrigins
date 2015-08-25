@@ -39,7 +39,6 @@
     setDisplayText(meaningDisplay, meaningArray)
     inputWrapper.classList.add('hidden');
     displayWrapper.classList.remove('hidden');
-    createShareImg();
   }
 
   //helper functions
@@ -63,20 +62,6 @@
 
   function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  function createShareImg() {
-    var context = nameDisplay.getContext('2d');
-    var dataUrl = nameDisplay.toDataURL();
-    generateMetaTag(dataUrl);
-  }
-
-  function generateMetaTag(url) {
-    var metaTag = document.createElement('meta');
-    metaTag.setAttribute('property', 'og:image');
-    metaTag.setAttribute('content', url);
-    var head = document.getElementsByTagName('head')[0];
-    head.appendChild(metaTag);
   }
 
   //register callbacks

@@ -1,9 +1,9 @@
 (function() {
   'use strict';
   //data
-  var adjectiveArray = ['Fucking', 'Shitty', 'Cum Stained', 'Dickish', 'Infected', 'Stupid', ];
+  var adjectiveArray = ['Fucking', 'Shitty', 'Cum Stained', 'Dickish', 'Infected', 'Stupid', 'Cunty', 'Disease Ridden'];
   var pronounArray = ['Moron', 'Cock', 'Douche', 'Dickhead', 'Asshole', 'Donkey Fucker', 'Fister', 'Anal Wart'];
-  var languagesArray = ['Latin', 'Greek', 'Egyptian', 'Etheopian'];
+  var languagesArray = ['Latin', 'Greek', 'Egyptian', 'Etheopian', 'Gaelic'];
 
   //wrapper elements
   var inputWrapper = document.getElementById('inputWrapper');
@@ -39,6 +39,7 @@
     setDisplayText(meaningDisplay, meaningArray)
     inputWrapper.classList.add('hidden');
     displayWrapper.classList.remove('hidden');
+    createShareImg();
   }
 
   //helper functions
@@ -62,6 +63,20 @@
 
   function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function createShareImg() {
+    var context = nameDisplay.getContext('2d');
+    var dataUrl = nameDisplay.toDataURL();
+    generateMetaTag(dataUrl);
+  }
+
+  function generateMetaTag(url) {
+    var metaTag = document.createElement('meta');
+    metaTag.setAttribute('property', 'og:image');
+    metaTag.setAttribute('content', url);
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(metaTag);
   }
 
   //register callbacks

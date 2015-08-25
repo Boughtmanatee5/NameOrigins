@@ -1,8 +1,8 @@
 (function() {
   'use strict';
   //data
-  var adjectiveArray = ['Fucking', 'Shitty', 'Cum Stained', 'Dickish', 'Infected', 'Stupid', 'Cunty', 'Disease Ridden'];
-  var pronounArray = ['Moron', 'Cock', 'Douche', 'Dickhead', 'Asshole', 'Donkey Fucker', 'Fister', 'Anal Wart'];
+  var adjectiveArray = ['Fucking', 'Shitty', 'Cum Stained', 'Dickish', 'Infected', 'Stupid', 'Cunty', 'Disease Ridden', 'Gigantic', 'Leaky'];
+  var pronounArray = ['Moron', 'Cock', 'Douche', 'Dickhead', 'Asshole', 'Donkey Fucker', 'Fister', 'Anal Wart', 'Pedophile', 'Cunt'];
   var languagesArray = ['Latin', 'Greek', 'Egyptian', 'Etheopian', 'Gaelic'];
 
   //wrapper elements

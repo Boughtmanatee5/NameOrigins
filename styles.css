@@ -115,5 +115,10 @@ span {
 .fb-share-button {
   background-color: #0b83c2;
   color: #fff;
+  margin-bottom: 1em;
+  border-radius: 7px;
+}
+.fb-share-button span {
   font-size: 20px;
+  color: #fff;
 }

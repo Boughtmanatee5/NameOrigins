@@ -31,9 +31,10 @@ h4 {
   margin-top: 0;
 }
 .container {
-  margin: 2em 25% 0 25%;
+  margin: 2em auto 0 auto;
   padding-top: 3em;
   height: 100vh;
+  width: 80%;
   text-align: center;
   background: #fff;
   border: 1px solid #bdcad0;
